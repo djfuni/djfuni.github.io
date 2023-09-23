@@ -616,7 +616,25 @@
 				}
 			});
 		</script>
-			<script src="https://myhkw.cn/player/js/jquery.min.js" type="text/javascript"></script>
+<!-- 在服务器端启用Gzip压缩 -->
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/x-javascript
+</IfModule>
+<!-- 在<head>标签中引入合并后的CSS文件 -->
+<link rel="stylesheet" href="styles.css">
+<!-- 在文档底部引入JavaScript，并使用async属性进行异步加载 -->
+<script src="script.js" async></script>
+<!-- 使用懒加载技术延迟加载图片 -->
+<img src="placeholder.jpg" data-src="image.jpg" class="lazyload" alt="Image">
+
+<!-- 引入懒加载库，并初始化 -->
+<script src="lazyload.js"></script>
+<script>
+  const lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazyload",
+    // 其他配置选项...
+  });
+</script>
 			<script src="https://myhkw.cn/api/player/168801576711" id="myhk" key="168801576711" m="1"></script>
 	</body>
 </html>
