@@ -1,0 +1,208 @@
+<html lang="zh-CN" version="4"><head>
+	<meta charset="utf-8">
+	<title>登录 | H⁺-氢云</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta content="云上主机商" name="description">
+	<meta content="H⁺-氢云,氢云网络,氢云互联" name="keywords">
+	<meta content="H⁺-氢云" name="author">
+
+	<!-- <link rel="shortcut icon" href="/themes/clientarea/default/assets/images/favicon.ico"> -->
+<link href="/themes/clientarea/default/assets/css/bootstrap.min.css?v=963737a2e8279ba0f8d6a47cdb9488de" rel="stylesheet" type="text/css">
+<link href="/themes/clientarea/default/assets/css/icons.min.css?v=963737a2e8279ba0f8d6a47cdb9488de" rel="stylesheet" type="text/css">
+<link href="/themes/clientarea/default/assets/css/app.min.css?v=963737a2e8279ba0f8d6a47cdb9488de" rel="stylesheet" type="text/css">
+<!-- 自定义全局样式 -->
+<link href="/themes/clientarea/default/assets_custom/css/global.css?v=963737a2e8279ba0f8d6a47cdb9488de" rel="stylesheet">
+<link href="/themes/clientarea/default/assets_custom/css/responsive.css?v=963737a2e8279ba0f8d6a47cdb9488de" rel="stylesheet">
+<!-- 字体图标 -->
+
+
+
+ <link href="/themes/clientarea/default/assets_custom/fonts/iconfont.css?v=963737a2e8279ba0f8d6a47cdb9488de" rel="stylesheet"> 
+
+<!-- JAVASCRIPT -->
+<script src="/themes/clientarea/default/assets/libs/jquery/jquery.min.js?v=963737a2e8279ba0f8d6a47cdb9488de"></script>
+<script src="/themes/clientarea/default/assets/libs/bootstrap/js/bootstrap.bundle.min.js?v=963737a2e8279ba0f8d6a47cdb9488de"></script>
+<script src="/themes/clientarea/default/assets/libs/metismenu/metisMenu.min.js?v=963737a2e8279ba0f8d6a47cdb9488de"></script>
+<script src="/themes/clientarea/default/assets/libs/simplebar/simplebar.min.js?v=963737a2e8279ba0f8d6a47cdb9488de"></script>
+<script src="/themes/clientarea/default/assets/libs/node-waves/waves.min.js?v=963737a2e8279ba0f8d6a47cdb9488de"></script>
+
+<!-- <script src="/themes/clientarea/default/assets/libs/error-all/solve-error.js" type="text/javascript"></script> -->
+<!-- 自定义js -->
+<script src="/themes/clientarea/default/assets_custom/js/throttle.js?v=963737a2e8279ba0f8d6a47cdb9488de"></script>
+
+<link type="text/css" href="/themes/clientarea/default/assets/libs/toastr/build/toastr.min.css?v=963737a2e8279ba0f8d6a47cdb9488de" rel="stylesheet">
+<script src="/themes/clientarea/default/assets/libs/toastr/build/toastr.min.js?v=963737a2e8279ba0f8d6a47cdb9488de"></script>
+
+
+  <script>
+	var setting_web_url = ''
+  var language=null;
+  </script>
+	<style>
+    .logo-lg img{
+      width:150px;
+      height:auto;
+    }
+</style>
+<style type="text/css">#_copy{align-items:center;background:#4494d5;border-radius:3px;color:#fff;cursor:pointer;display:flex;font-size:13px;height:30px;justify-content:center;position:absolute;width:60px;z-index:1000}#select-tooltip,#sfModal,.modal-backdrop,div[id^=reader-helper]{display:none!important}.modal-open{overflow:auto!important}._sf_adjust_body{padding-right:0!important}.enable_copy_btns_div{position:fixed;width:154px;left:10px;top:45%;background:#e7f1ff;border:2px solid #4595d5;font-weight:600;border-radius:2px;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;z-index:5000}.enable_copy_btns_logo{width:100%;background:#4595d5;text-align:center;font-size:12px;color:#e7f1ff;line-height:30px;height:30px}.enable_copy_btns_btn{display:block;width:128px;height:28px;background:#7f5711;border-radius:4px;color:#fff;font-size:12px;border:0;outline:0;margin:8px auto;font-weight:700;cursor:pointer;opacity:.9}.enable_copy_btns_btn:hover{opacity:.8}.enable_copy_btns_btn:active{opacity:1}</style>
+<style>
+#clip_copy,#web-copy-btn-wk{
+   background:#54aae9 !important
+}
+</style>
+</head>
+<body data-sidebar="dark" inmaintabuse="1">
+	  
+  
+ <script src="/themes/clientarea/default/assets/js/public.js" type="text/javascript"></script>
+
+<style>
+		.logo.text-center img{height:50px;}
+    .list-inline-item .icon {
+        width: 2rem;
+        height: 2rem;
+    }
+    .social-list-item {
+        border: none;
+    }
+    .input-group-prepend {
+        width: 100px;
+    }
+	.allow_login_code_captcha{display:none;}
+	.auth-full-bg .bg-overlay {
+		background: url(/themes/clientarea/default/assets_custom/img/new-background.jpg)no-repeat left top / 100% 1400px;
+		background-size: cover;
+		opacity:1;
+	}
+  .form-control,.input-group-append{
+    height: 46px;
+  }
+</style>
+<script type="text/javascript">
+    var mk = '7b0547a7dbaf0894b1a591474abf47ba';
+</script>
+<div class="container-fluid p-0">
+        <div class="row no-gutters">
+
+        <div class="col-xl-7 bglogo">
+            <div class="auth-full-bg pt-lg-5 p-4">
+                <div class="w-100">
+				
+					                    <div class="bg-overlay"></div>
+					                    <div class="d-flex h-100 flex-column justify-content-center">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-7">
+                                <div class="text-center">
+                                    <div dir="ltr">
+                                        <div class="owl-carousel owl-theme auth-review-carousel" id="auth-review-carousel">
+                                            <div class="item">
+                                                <div class="py-3">
+                                                    <h1 class="text-white text-left">
+                                                        </h1>
+                                                    <p class="text-white-50 text-left">
+                                                        </p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+
+        <div class="col-xl-5">
+            <div class="auth-full-page-content p-md-5 p-4">
+                <div class="login_right mx-auto">
+                    <div class="d-flex flex-column h-100">
+                        <div class="my-auto">
+                            <div class="logo text-center">
+                              <a href="http://cloud.shiyu233.top"><img src="https://www.shiyu233.top/ui/png/H.png" alt="" class="cursor"></a>
+                            </div>
+                            <ul class="affs-nav nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+
+								<!-- 手机 -->
+								
+								<!-- 邮箱 -->
+                                                                <li class="nav-item">
+                                    <a class="nav-link fs-14 bg-transparent  " data-toggle="tab" href="#email" role="tab" aria-selected="true">邮箱登录</a>
+                                </li>
+                                                                
+                            </ul>
+
+                            <div class="mt-4">
+								<div class="tab-content">
+																		<div id="email" class="tab-pane  active" role="tabpanel">
+										<form method="post" action="/login?action=email"><input type="hidden" name="token" value="01e4ca8b3ace9b887c7c56665dbe23e0">										
+											<div class="form-group">
+												<label for="username">邮箱</label>
+												<input type="text" class="form-control" id="emailInp" name="email" value="" placeholder="请输入您的邮箱或ID">
+											</div>
+											<div class="form-group">
+												<div class="d-flex justify-content-between">
+													<label for="userpassword">密码</label>
+												</div>
+												<input type="password" class="form-control" id="emailPwdInp" name="password" placeholder="请输入您的密码">
+											</div>
+															
+                      <div class="d-flex justify-content-between">
+													<label for="userpassword"></label>
+														<a href="pwreset" class="text-primary mr-0">忘记密码?</a>
+												</div>							
+											<div class="mt-3">
+																								<button class="btn btn-primary py-2 fs-14 btn-block waves-effect waves-light  d-flex justify-content-center align-items-center" type="submit">登录</button>
+																								
+											</div>
+										</form>
+									</div>
+																	</div>
+                            </div>
+
+                            
+                            <div class="mt-5 text-center">
+                                <p>还没有账户 ? <a href="register" class="font-weight-medium text-primary"> 现在注册 </a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+    </div>
+
+        <!-- end row -->
+</div>
+<!-- end container-fluid -->
+
+
+<script type="text/javascript">
+ 
+phoneCheck("","allow_login_code_captcha")
+
+</script>
+<script src="/themes/clientarea/default/assets/js/app.js?v=963737a2e8279ba0f8d6a47cdb9488de"></script>
+
+
+<div id="fatkun-drop-panel">
+    <a id="fatkun-drop-panel-close-btn">×</a>
+        <div id="fatkun-drop-panel-inner">
+            <div class="fatkun-content">
+                <svg class="fatkun-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5892"><path d="M494.933333 782.933333c2.133333 2.133333 4.266667 4.266667 8.533334 6.4h8.533333c6.4 0 10.666667-2.133333 14.933333-6.4l2.133334-2.133333 275.2-275.2c8.533333-8.533333 8.533333-21.333333 0-29.866667-8.533333-8.533333-21.333333-8.533333-29.866667 0L533.333333 716.8V128c0-12.8-8.533333-21.333333-21.333333-21.333333s-21.333333 8.533333-21.333333 21.333333v588.8L249.6 475.733333c-8.533333-8.533333-21.333333-8.533333-29.866667 0-8.533333 8.533333-8.533333 21.333333 0 29.866667l275.2 277.333333zM853.333333 874.666667H172.8c-12.8 0-21.333333 8.533333-21.333333 21.333333s8.533333 21.333333 21.333333 21.333333H853.333333c12.8 0 21.333333-8.533333 21.333334-21.333333s-10.666667-21.333333-21.333334-21.333333z" p-id="5893"></path></svg>
+                <div class="fatkun-title">拖拽到此处</div>
+                <div class="fatkun-desc">图片将完成下载</div>
+            </div>
+            <div id="fatkun-supported-by">由AIX智能下载器(图片/视频/音乐/文档)提供</div>
+        </div>
+    </div><script src="chrome-extension://cdnlggbebabeoneeglhadpagegmflmbc/aiscripts/scriptBus.js"></script>
+         <div title="长按可拖动到任何位置" id="chatgptLogo_abc" style="position: fixed; z-index: 2147483647; width: 64px; height: 64px; top: 116px; right: 0px; cursor: pointer; border-radius: 8px; background-image: url(&quot;chrome-extension://dedljpdecfecpdeobfmcpkemkdhgjdng/images/logo.png&quot;); background-size: 100% 100%; left: 1623px;">
+         </div>     
+    <script src="chrome-extension://nhiheekdcnmfbapkmpbhmplfddenhjic/sm.bundle.js" data-pname="supercopy-v3" data-asset-path="https://spc3.s3.ap-east-1.amazonaws.com"></script><script></script></body></html>
