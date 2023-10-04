@@ -1,75 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>云电脑购买页面</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f6f6f6;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    <title>云电脑选择页</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
 
-    .container {
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-      padding: 20px;
-      max-width: 400px;
-      width: 100%;
-    }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
 
-    h1 {
-      text-align: center;
-      margin-top: 0;
-    }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-    select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
-    }
+        .product {
+            width: 250px;
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
 
-    button {
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-  </style>
+        .product:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+
+        .product h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            color: #777;
+        }
+
+        .product button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #ff9900;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 添加动态波感 */
+        .product::before {
+            content: "";
+            position: absolute;
+            top: -200px;
+            left: -200px;
+            width: 400px;
+            height: 400px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease-out;
+            z-index: 0;
+        }
+
+        .product:hover::before {
+            top: -100px;
+            left: -100px;
+            width: 200px;
+            height: 200px;
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <h1>云电脑购买页面</h1>
-    <form id="purchase-form">
-      <div class="form-group">
-        <label for="plan">选择套餐：</label>
-        <select id="plan" required>
-          <option value="">请选择</option>
-          <option value="free">免费套餐</option>
-        </select>
-      </div>
-      <button type="submit">购买</button>
-    </form>
-  </div>
+    <h1>商品选择页</h1>
 
-  <script>
-    document.getElementById('purchase-form').addEventListener('submit', function(event) {
-      event.preventDefault();
-      var plan = document.getElementById('plan').value;
-      if (plan === 'free') {
-        window.location.href = 'https://docs.qq.com/form/page/DYlF5V0xXTGtMSWlv';
-      }
-    });
-  </script>
+    <div class="product-list">
+        <div class="product">
+            <img src="https://picdl.sunbangyan.cn/2023/10/04/gw47d7.png" alt="Product 1">
+            <h2>免费版</h2>
+            <p>性能还行，win10系统，现已开放</p>
+            <button>选择</button>
+        </div>
+
+        <div class="product">
+            <img src="https://picdl.sunbangyan.cn/2023/10/04/gw4f54.png" alt="Product 2">
+            <h2>付费版</h2>
+            <p>性能更好且win11系统，暂未开放！！！</p>
+            <button>选择</button>
+        </div>
+
+        <!-- 可以添加更多产品 -->
+
+    </div>
+
+    <script>
+        // 获取所有产品卡片元素
+        var productCards = document.querySelectorAll('.product');
+
+        // 为每个产品卡片添加鼠标移入事件处理程序
+        productCards.forEach(function(card) {
+            card.addEventListener('mouseover', function() {
+                card.style.transform = 'scale(1.05)';
+                card.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.2)';
+            });
+
+            card.addEventListener('mouseout', function() {
+                card.style.transform = 'scale(1)';
+                card.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+            });
+        });
+
+        // 获取免费版选择按钮元素
+        var freeButton = document.querySelector('.product:nth-child(1) button');
+
+        // 获取付费版选择按钮元素
+        var paidButton = document.querySelector('.product:nth-child(2) button');
+
+        // 免费版选择按钮点击事件处理程序
+        freeButton.addEventListener('click', function() {
+            window.location.href = 'https://docs.qq.com/form/page/DYlF5V0xXTGtMSWlv#/fill';
+        });
+
+        // 付费版选择按钮点击事件处理程序
+        paidButton.addEventListener('click', function() {
+            alert('付费版暂未开放！');
+        });
+    </script>
 </body>
 </html>
