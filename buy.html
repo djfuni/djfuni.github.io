@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>收款页面</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-
-    span {
-      font-weight: bold;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #0099CC;
-      color: #FFF;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0077B3;
-    }
-  </style>
+    <title>支付页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+        form:hover {
+            transform: scale(1.02);
+        }
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function submitForm() {
+            window.location.href = 'https://docs.qq.com/form/page/DYnlsWGFsWlhiSUZI';
+            return false; // prevent form submission
+        }
+    </script>
 </head>
 <body>
-  <h1>扫描二维码付款</h1>
-
-  <p>价格：<span>1元</span> 支付方式：<span>支付宝、微信等</span></p>
-
-  <img src="https://picdl.sunbangyan.cn/2023/10/04/hh25ki.png" alt="付款二维码">
-
-  <p>请使用支付宝、微信等APP扫描上方二维码进行付款。</p>
-  
-  <a href="https://docs.qq.com/form/page/DYnlsWGFsWlhiSUZI" target="_blank">
-    <button type="button">已经付款，点击此处申请付费版</button>
-  </a>
-
+    <div class="container">
+        <form onsubmit="return submitForm();">
+            <h2>支付页面</h2>
+            <img src="https://picdl.sunbangyan.cn/2023/10/04/hh25ki.png" alt="支付图片">
+            <label for="amount">金额:</label><br>
+            <input type="text" id="amount" name="amount" value="3" readonly><br>
+            <label for="type">支付方式:</label><br>
+            <select id="type" name="type">
+                <option value="alipay">支付宝</option>
+                <option value="wechat">微信</option>
+                <!-- 添加其他支付方式 -->
+            </select><br>
+            <input type="submit" value="提交">
+        </form>
+    </div>
 </body>
 </html>
