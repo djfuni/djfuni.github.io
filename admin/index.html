@@ -207,11 +207,17 @@
       function writeUserDataToFile() {
         const userData = userManager.users.map(user => `${user.id},${user.name},${user.score}`).join('\n');
         const fileData = new Blob([userData], { type: 'text/plain' });
-        const a = document.createElement('a');
-        const url = URL.createObjectURL(fileData);
-        a.href = url;
-        a.download = 'user.txt';
-        a.click();
+        const reader = new FileReader();
+
+        reader.onloadend = function () {
+          const dataUrl = reader.result;
+          const a = document.createElement('a');
+          a.href = dataUrl;
+          a.download = 'user.txt';
+          a.click();
+        };
+
+        reader.readAsDataURL(fileData);
       }
     </script>
   </body>
